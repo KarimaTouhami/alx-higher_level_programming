@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # alx-higher_level_programming
-=======
 # Higher-level programming - Python, JavaScript, SQL
 
 <p align="center"> 
@@ -36,4 +34,3 @@ All the work featured in this project was undertaken as an integral part of the 
     alt="ALX Africa Logo"
   >
   </p>
->>>>>>> c56db03bbff7a4e5bd874c1c32f2d5c0a87aafc4
