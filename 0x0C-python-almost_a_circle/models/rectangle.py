@@ -85,18 +85,20 @@ class Rectangle(Base):
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
 
+    def update(self, *args, **kwargs):
+        """ Updates attributes with no-keyword or key-worded arguments """
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        
+        if args:
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
+
     def __str__(self):
         """ String representation of the rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height
         )
-
-
-if __name__ == "__main__":
-    r1 = Rectangle(2, 3, 2, 2)
-    r1.display()
-
-    print("---")
-
-    r2 = Rectangle(3, 2, 1, 0)
-    r2.display()
